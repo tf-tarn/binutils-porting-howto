@@ -267,7 +267,9 @@ TARGET32_LIBOPCODES_CFILES = \
 	xgate-dis.c \
 	xgate-opc.c \
 	z80-dis.c \
-	z8k-dis.c
+	z8k-dis.c \
+	hd6305-dis.c \
+	hd6305-opc.c
 
 # C source files that correspond to .o's ending up in libopcodes.
 LIBOPCODES_CFILES = \

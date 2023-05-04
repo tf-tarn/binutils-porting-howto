@@ -347,6 +347,7 @@ if test x${all_targets} = xfalse ; then
 	bfd_z8k_arch)		ta="$ta z8k-dis.lo" ;;
 	bfd_bpf_arch)		ta="$ta bpf-asm.lo bpf-desc.lo bpf-dis.lo bpf-ibld.lo bpf-opc.lo" using_cgen=yes ;;
 	bfd_loongarch_arch)	ta="$ta loongarch-dis.lo loongarch-opc.lo loongarch-coder.lo" ;;
+	bfd_hd6305_arch)	ta="$ta hd6305-dis.lo hd6305-opc.lo" ;;
 
 	"")			;;
 	*)		AC_MSG_ERROR(*** unknown target architecture $arch) ;;
