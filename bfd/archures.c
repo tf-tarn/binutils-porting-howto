@@ -563,6 +563,8 @@ DESCRIPTION
 .#define bfd_mach_amdgcn_gfx1030 0x036
 .#define bfd_mach_amdgcn_gfx1031 0x037
 .#define bfd_mach_amdgcn_gfx1032 0x038
+.  bfd_arch_hd6305,     {* The HD6305 processor.  *}
+.#define bfd_mach_hd6305		1
 .  bfd_arch_last
 .  };
 */
@@ -698,6 +700,7 @@ extern const bfd_arch_info_type bfd_xtensa_arch;
 extern const bfd_arch_info_type bfd_xgate_arch;
 extern const bfd_arch_info_type bfd_z80_arch;
 extern const bfd_arch_info_type bfd_z8k_arch;
+extern const bfd_arch_info_type bfd_hd6305_arch;
 
 static const bfd_arch_info_type * const bfd_archures_list[] =
   {
@@ -784,6 +787,7 @@ static const bfd_arch_info_type * const bfd_archures_list[] =
     &bfd_xgate_arch,
     &bfd_z80_arch,
     &bfd_z8k_arch,
+    &bfd_hd6305_arch,
 #endif
   0
 };

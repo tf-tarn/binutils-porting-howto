@@ -950,6 +950,7 @@ extern const bfd_target xtensa_elf32_le_vec;
 extern const bfd_target z80_coff_vec;
 extern const bfd_target z80_elf32_vec;
 extern const bfd_target z8k_coff_vec;
+extern const bfd_target hd6305_elf32_vec;
 
 /* These are always included.  */
 extern const bfd_target srec_vec;
