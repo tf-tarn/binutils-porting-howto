@@ -1865,6 +1865,8 @@ enum bfd_architecture
 #define bfd_mach_amdgcn_gfx1030 0x036
 #define bfd_mach_amdgcn_gfx1031 0x037
 #define bfd_mach_amdgcn_gfx1032 0x038
+  bfd_arch_hd6305,     /* The HD6305 processor.  */
+#define bfd_mach_hd6305                1
   bfd_arch_last
   };
 
