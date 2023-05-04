@@ -208,7 +208,8 @@ TARGET_CPU_CFILES = \
 	config/tc-xgate.c \
 	config/tc-xtensa.c \
 	config/tc-z80.c \
-	config/tc-z8k.c
+	config/tc-z8k.c \
+	config/tc-hd6305.c
 
 TARGET_CPU_HFILES = \
 	config/tc-aarch64.h \
@@ -281,7 +282,8 @@ TARGET_CPU_HFILES = \
 	config/tc-xgate.h \
 	config/tc-xtensa.h \
 	config/tc-z80.h \
-	config/tc-z8k.h
+	config/tc-z8k.h \
+	config/tc-hd6305.h
 
 TARGET_EXTRA_FILES = \
 	config/bfin-lex-wrapper.c \
