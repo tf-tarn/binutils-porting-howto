@@ -1,3 +1,63 @@
+--------------------------------------------------------------------------------
+
+                        About this Repository
+
+This is an attempt to create a minimal working example of porting a
+modern version (as of this writing) of binutils to a new architecture,
+with the steps spelled out in smallish, meaningful commits.
+
+In the past I found the guide linked below to be helpful, but it is
+old and the patches don't seem to work with new binutils versions
+as-is. Furthermore, it doesn't really mention using autotools
+explicitly, so as a novice user of such things I felt I was on rather
+shaky ground doing things like patching both configure.ac and
+configure in the same directory. It seemed like redundant work, which
+it turns out, is.
+
+https://atgreen.github.io/ggx/
+
+The current version (if I have kept this file up to date) is the first
+minimal, sort-of working step towards adding support for a new
+architecture.
+
+With these modifications, many parts of binutils compile. To check
+which, I used the following command in the build directory.
+
+> for dir in $(find -mindepth 2 -maxdepth 2 -type f -name "Makefile" -exec dirname {} \;); do (echo -n $dir; cd $dir; make >/dev/null 2>&1 && echo " ok" || echo " fail"); done
+
+It gives this output:
+./libiberty ok
+./zlib ok
+./libsframe ok
+./intl ok
+./libbacktrace ok
+./libdecnumber ok
+./etc ok
+./readline ok
+./gnulib ok
+./binutils fail
+./gas fail
+./gprof fail
+./bfd ok
+./opcodes ok
+./gdbsupport ok
+./sim ok
+./libctf ok
+./gdb fail
+
+The failures are due to as-yet undefined symbols. The next step is to
+define some of those.
+
+
+See also
+http://sourceware.org/binutils/binutils-porting-guide.txt
+and various search engine results about porting binutils...
+
+
+The original binutils README follows.
+--------------------------------------------------------------------------------
+
+
 		   README for GNU development tools
 
 This directory contains various GNU compilers, assemblers, linkers, 
