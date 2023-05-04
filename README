@@ -2,9 +2,16 @@
 
                         About this Repository
 
-This is an attempt to create a minimal working example of porting a
-modern version (as of this writing) of binutils to a new architecture,
-with the steps spelled out in smallish, meaningful commits.
+This is an attempt to create a minimal working starting point to
+porting a modern version (as of this writing) of binutils to a new
+target architecture, with the steps spelled out in smallish,
+meaningful commits.
+
+The architecture being added is named hd6305, which is a real
+processor to which I plan to port binutils, but I do not intend this
+repository to contain any code actually specific to this processor,
+making this really only a template and the name something to be
+replaced in a real implementation.
 
 In the past I found the guide linked below to be helpful, but it is
 old and the patches don't seem to work with new binutils versions
